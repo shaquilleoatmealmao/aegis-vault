@@ -25,7 +25,7 @@ Keypad keypad = Keypad(makeKeymap(keymap), rowPins, colPins, ROWS, COLS);
 // Change these before considering the prototype secure.
 const char ACCESS_PIN[] = "2048";
 // Scan a card with Serial Monitor open, then paste its upper-case UID here.
-const char AUTHORIZED_UID[] = "REPLACE_WITH_YOUR_CARD_UID";
+const char AUTHORIZED_UID[] = "9DBCC101";
 
 String enteredPin;
 bool unlocked = false, alarmOn = false;
