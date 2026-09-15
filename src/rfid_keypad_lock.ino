@@ -1,4 +1,4 @@
-/* AEGIS VAULT — Arduino Uno secure micro-locker
+/* Arduino RFID Keypad Lock — Arduino Uno access-control prototype
    Libraries: MFRC522 by GithubCommunity; Keypad by Mark Stanley/Alexander Brevig */
 #include <SPI.h>
 #include <MFRC522.h>
@@ -130,7 +130,7 @@ void setup() {
   SPI.begin();
   rfid.PCD_Init();
   setLocked(true, F("system boot"));
-  Serial.println(F("AEGIS VAULT READY — scan card or enter PIN then #. Press A to lock."));
+  Serial.println(F("RFID KEYPAD LOCK READY — scan card or enter PIN then #. Press A to lock."));
 }
 
 void loop() {

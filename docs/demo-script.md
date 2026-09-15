@@ -1,6 +1,6 @@
 # 45-second demo script
 
-> This is Aegis Vault, a secure micro-locker I built with an Arduino Uno. It uses two forms of authentication: an RFID card and a keypad PIN.
+> This is an Arduino RFID Keypad Lock, an Arduino Uno access-control prototype. It uses two forms of authentication: an RFID card and a keypad PIN.
 
 1. Begin with the door closed, red LED on, and Serial Monitor visible.
 2. Scan an unknown card or enter a wrong PIN three times. Point out the red flashing lockout and buzzer.

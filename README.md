@@ -1,6 +1,6 @@
-# Aegis Vault
+# Arduino RFID Keypad Lock
 
-**Aegis Vault is a secure, Arduino-powered micro-locker I built to explore physical security, embedded software, and human-friendly hardware design.** It authenticates people with either an RFID card or a keypad PIN, physically unlocks with a servo latch, and enters a visible/audio lockout after repeated failed attempts.
+Arduino RFID Keypad Lock is a secure Arduino Uno access-control prototype. It authenticates with either an RFID card or a keypad PIN, actuates a servo latch, and enters a visible and audible lockout after repeated failed attempts.
 
 I designed it as a small prototype for use cases such as equipment checkout, dorm-room storage, or controlled makerspace supplies. The goal was to make a security system that is tangible enough to demo: scan a card, hear the confirmation tone, watch the lock release, and see the system defend itself from repeated bad attempts.
 
@@ -37,7 +37,7 @@ Full pin-by-pin wiring is in [docs/wiring.md](docs/wiring.md). Assembly and setu
 
 1. Install the Arduino IDE libraries **MFRC522** and **Keypad** from Library Manager.
 2. Wire the hardware using [the wiring guide](docs/wiring.md).
-3. Upload [src/aegis_vault.ino](src/aegis_vault.ino) to the Uno.
+3. Upload [src/rfid_keypad_lock.ino](src/rfid_keypad_lock.ino) to the Uno.
 4. Open Serial Monitor at `9600` baud and scan the intended card once.
 5. Copy the printed UID into `AUTHORIZED_UID` in the sketch and choose a new `ACCESS_PIN`.
 6. Upload again and test the lock before mounting the servo horn to the enclosure.

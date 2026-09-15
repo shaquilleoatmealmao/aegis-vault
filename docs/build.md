@@ -2,7 +2,7 @@
 
 1. Build the circuit on the breadboard using [wiring.md](wiring.md).
 2. In Arduino IDE, install `MFRC522` and `Keypad` via **Tools → Manage Libraries**.
-3. Open `src/aegis_vault.ino`, choose **Arduino Uno**, and upload.
+3. Open `src/rfid_keypad_lock.ino`, choose **Arduino Uno**, and upload.
 4. Open Serial Monitor at `9600` baud. Scan the RFID card I want to authorize; the sketch prints its UID.
 5. Replace `REPLACE_WITH_YOUR_CARD_UID` with that UID. I also replace the starter `2048` PIN before demonstrating the project.
 6. Upload again. Scan the authorized card, or type the PIN and press `#`. Press `A` at any time to lock immediately.
