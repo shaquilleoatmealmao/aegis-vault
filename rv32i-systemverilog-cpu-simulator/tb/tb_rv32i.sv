@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
-module tb_lumenv;
+module tb_rv32i;
   logic clk = 0, rst_n = 0;
-  lumenv_core #(.IMEM_WORDS(64), .DMEM_BYTES(256)) dut (.clk, .rst_n);
+  rv32i_core #(.IMEM_WORDS(64), .DMEM_BYTES(256)) dut (.clk, .rst_n);
   always #5 clk = ~clk;
 
   initial begin

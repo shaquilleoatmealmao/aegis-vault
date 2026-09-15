@@ -1,7 +1,6 @@
 `timescale 1ns/1ps
-// RV32I SystemVerilog CPU Simulator: a small, simulation-first CPU.
-// Implements a useful RV32I subset in a single-cycle datapath.
-module lumenv_core #(
+// RV32I single-cycle processor.
+module rv32i_core #(
   parameter int IMEM_WORDS = 256,
   parameter int DMEM_BYTES = 4096
 ) (

@@ -1,6 +1,6 @@
 # RV32I SystemVerilog CPU Simulator
 
-This is a simulation-first, single-cycle RV32I processor written in SystemVerilog. It is a complete virtual CPU project: no FPGA board or proprietary toolchain is required.
+Single-cycle RV32I processor implemented in SystemVerilog and verified in simulation. No FPGA board or proprietary toolchain is required.
 
 ## What works
 
@@ -33,7 +33,7 @@ make lint
 
 ## Architecture
 
-This first release is deliberately **single-cycle**. It is complete, readable, and testable before adding pipeline complexity. The next milestone is a five-stage version with forwarding and stalls, sharing the same instruction tests.
+The processor uses a single-cycle datapath. A five-stage implementation with forwarding and stalls is a future extension.
 
 ```text
 instruction memory -> decode/register file -> ALU -> data memory -> register file
@@ -41,12 +41,8 @@ instruction memory -> decode/register file -> ALU -> data memory -> register fil
                                   +-------- PC control -----+
 ```
 
-`rtl/lumenv_core.sv` is the processor; `tb/tb_lumenv.sv` is a self-checking simulation testbench; `programs/smoke_test.S` documents the test program in RISC-V assembly.
+`rtl/rv32i_core.sv` contains the processor. `tb/tb_rv32i.sv` contains the self-checking testbench. `programs/smoke_test.S` contains the corresponding RISC-V assembly program.
 
 ## Scope
 
 The core supports the RV32I base integer instructions represented in the implementation. It does not claim support for privileged mode, floating point, atomics, compressed instructions, interrupts, caches, or an MMU.
-
-## Learning reference
-
-The design follows the processor-design progression in the free *Basic Computer Architecture* material by Smruti R. Sarangi: logic/registers/memory, processor design, pipelining, then RISC-V assembly.
